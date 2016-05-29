@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView 
+             android:layout_height="1dp"
+             android:layout_width="fill_parent"
+             android:background="@drawable/black"
+             />
+   
+    <LinearLayout
+        android:id="@+id/tablisttop"
+        android:layout_height="40dp"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal" 
+        android:background="@drawable/background_top"     
+        >
+        <Spinner 
+            android:id="@+id/chooseCourse_inBijipptlist"
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"  
+            android:layout_marginLeft="15dp" 
+            android:layout_weight="2" 
+  
+             
+            />
+        
+        <LinearLayout 
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="3"            
+            android:orientation="horizontal"
+            android:layout_marginRight="15dp"
+            android:focusable="true" 
+            android:focusableInTouchMode="true"
+            >
+         <EditText 
+             android:id="@+id/selectedit"
+             android:layout_height="fill_parent"
+             android:layout_width="wrap_content"
+             android:hint="关键字"
+             android:textSize="12sp"
+             android:layout_weight="1"
+             />   
+             
+         <ImageView 
+             android:id="@+id/selectimge"
+             android:layout_height="40dp"
+             android:layout_width="40dp"
+             android:src="@drawable/select"
+             android:scaleType="fitXY"             
+             
+             />
+                         
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+    
+     
+    <ImageView 
+             android:layout_height="2dp"
+             android:layout_width="fill_parent"
+             android:background="@drawable/white"
+             />
+    
+    <ListView 
+        android:id="@+id/pptlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:fastScrollEnabled="true"
+        
+         >
+    </ListView>
+    
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="没有其他记录了啦"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        />
+    
+
+</LinearLayout>

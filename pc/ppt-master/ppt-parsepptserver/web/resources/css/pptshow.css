@@ -1,0 +1,187 @@
+*{
+    margin: 0 ;
+
+}
+.top {
+    height: 5%;
+    width: 100%;
+    background-color: #adadad;
+    position: absolute;
+
+
+}
+
+.top .top_spans {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    float: right;
+    margin-right: 80px;
+    line-height: 30px;
+
+}
+
+.content {
+    width: 80%;
+    height: 95%;
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    background-color: #269abc;
+    text-align: center;
+    overflow: hidden;
+}
+
+.left {
+    width: 20%;
+    height: 95%;
+    position: absolute;
+    top: 5%;
+    background-color: peachpuff;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.content .pptimg {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    overflow: hidden;
+
+
+}
+
+.content #slide {
+    width: 100%;
+    height: 100%;
+}
+
+.left ul {
+    padding-left: 1px;
+    padding-right: 10px;
+}
+
+.left li {
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+}
+
+.left li img:hover {
+    box-shadow:0px 0px 10px deeppink;
+    /*border:2px solid #e24b70;*/
+    /*color: deeppink;*/
+}
+
+.left li span {
+    position: absolute;
+    margin: -2px;
+    font-family: "Microsoft YaHei", "ËÎÌå", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+}
+
+.left img {
+    padding: 7px;
+    width: 90%;
+}
+
+.fullScreen {
+    width: 30px;
+    height: 30px;
+    background: url(../../resources/img/sprite.png) 8px -51px rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 2px 0;
+    z-index: 9999;
+    cursor: pointer;
+    display: inline-block;
+
+    transition: all .3s;
+}
+
+.arrow-l{
+    float: right;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    margin-top: -15px;
+    cursor: pointer;
+    z-index: 3;
+    background: url(../../resources/img/sprite.png) -25px 0px rgba(0,0,0,0.8) no-repeat;
+    transition: all .1s;
+
+}
+
+.arrow-l:active {
+    left: -0.5%;
+}
+
+.arrow-r {
+    float: right;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    margin-top: -15px;
+    cursor: pointer;
+    z-index: 3;
+    background: url(../../resources/img/sprite.png) rgba(0,0,0,0.8) no-repeat;
+    transition: all .1s;
+}
+
+ .arrow-r:active {
+     right: -0.5%;
+}
+
+/*Òþ²ØÃæ°å*/
+.chooseFile , .broacastIP{
+
+    width: 340px;
+    height: 200px;
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    background-color: cadetblue;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.chooseFile .uploadFile , .broacastIP .sendIP {
+    margin: 35px;
+}
+
+.pptfile {
+    border: 2px solid white;
+}
+
+/*button {*/
+    /*position: absolute;*/
+    /*top: 120px;*/
+/*}*/
+select {
+    width: 200px;
+}
+
+
+
+
+
+/* when fullscreen active */
+:-webkit-full-screen {
+    position: absolute !important;
+    top: 0 !important;
+    /*left: 0 !important;*/
+    width: 80% !important;
+    height: 100% !important;
+}

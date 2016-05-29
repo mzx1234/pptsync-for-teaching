@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课堂ppt同步播放</title>
+
+    <link rel="stylesheet" type="text/css" href="../../resources/css/pptshow.css" />
+    <script src="../../resources/js/jquery-2.1.1.min.js"></script>
+    <script   src="../../resources/js/pptshow.js"></script>
+
+
+</head>
+<body>
+    <div class="top">
+        <div class="top_spans">
+            <span id="syncControl">[Sync Open]</span>
+            <span>|</span>
+            <span id="broacast">[广播IP]</span>
+            <span>|</span>
+            <span id="choose">[选择文件]</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="pptimg">
+             <span class="fullScreen" style=""></span>
+
+             <img id="slide" src="../../resources/img/image-1.jpg">
+            <div class="arrow-l"></div>
+            <div class="arrow-r autoPlayButton"></div>
+        </div>
+
+    </div>
+
+    <div class="left">
+        <ul class="left_ul">
+
+            <li>
+                <span>1</span>
+                <img class="1" src="../../resources/img/image-1.jpg" onclick="switchFunction('../../resources/img/image-1.jpg')">
+            </li>
+            <li>
+                <img class="2" src="../../resources/img/image-2.jpg" onclick="switchFunction('../../resources/img/image-2.jpg')">
+            </li>
+            <li >
+                <img src="../../resources/img/image-3.jpg">
+            </li>
+            <li>
+                <img src="../../resources/img/image-4.jpg">
+            </li>
+        </ul>
+    </div>
+
+    <!--隐藏模块-->
+    <div class="chooseFile">
+        <div class="uploadFile">
+            <form action="/upload" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+                <input class="pptfile" type="file" name="file" />
+                <br><br><br><br><br><br>
+                <input type="submit" name="Submit"/>
+                <button type="button" class="cancle">取消</button>
+            </form>
+        </div>
+    </div>
+
+    <!--隐藏模块-->
+    <div class="broacastIP">
+        <div class="sendIP">
+            <span>选择IP:</span>
+            <select id="ips"></select>
+            <br><br><br><br><br><br>
+
+            <button class="confirm">确定</button>
+            <button class="cancle">取消</button>
+        </div>
+    </div>
+</body>
+</html>

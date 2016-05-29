@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+    <bean id="propertyConfigurer" class="com.mzx.pptcommon.expand.CustomizedPropertyConfigurer" lazy-init="false">
+        <property name="locations">
+            <list>
+                <value>properties/cache.properties</value>
+                <value>properties/db.properties</value>
+                <value>properties/mq.properties</value>
+                <value>properties/thrift.properties</value>
+                <value>properties/common.properties</value>
+                <value>properties/redis.properties</value>
+                <value>properties/netty.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <import resource="poi.xml"/>
+    <import resource="redis.xml"/>
+    <import resource="netty.xml"/>
+
+
+    <!-- 启动对@AspectJ注解的支持 -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- 开启自动扫描 autowire 配置 -->
+    <context:component-scan base-package="com.mzx.pptparseserver"/>
+
+
+
+</beans>
